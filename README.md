@@ -1,2 +1,2 @@
 # GoogleKickStartIRATHI
-Google Competitions Attempts... coded in Python
+Google Kick Start Attempts... coded in Python
