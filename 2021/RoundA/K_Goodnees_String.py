@@ -36,6 +36,12 @@ This Answer:
 Time Complex: O(N)
 Space Complex: O(1)
 """
+def goodnessString(s, n, k):
+    counter = 0
+    for i in range(n // 2): #check half the string
+        if s[i] != s[n - (i + 1)]: #check conditon
+            counter += 1
+    return abs(k - counter) #check required number of steps
 
 def main():
     tests = int(input())
@@ -45,13 +51,6 @@ def main():
         answer = goodnessString(s, n, k)
         print("Case #{}: {}".format(i, answer))
 
-
-def goodnessString(s, n, k):
-    counter = 0
-    for i in range((len(s) // 2) + (len(s) % 2)): #check half the string
-        if s[i] != s[n - (i + 1)]: #check conditon
-            counter += 1
-    return abs(k - counter) #check required number of steps
 
 if __name__ == "__main__":
     main()
